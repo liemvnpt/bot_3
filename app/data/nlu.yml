@@ -22,20 +22,10 @@ nlu:
     - em ơi, cho anh hỏi
     - bot ơi
     - cho mình hỏi chút
-    - chào bạn nha
-    - chào bot
-    - hello
-    - xin chào 
-    - hôm nay bạn thế nào 
-    - hey
-    - chào bạn
-    - alo alo
-    - hú
-    - merci
 
 - intent: goodbye
   examples: |
-    - bai bai
+    - cu
     - good by
     - cee you later
     - good night
@@ -49,31 +39,29 @@ nlu:
     - bye bye
     - tạm biệt em
     - tạm biệt bot nhá
-    - tạm biệt bạn nha
-    - bye
-    - gặp sau nha
-    - hẹn lần khác
-    - lúc khác nói tiếp sau
-    - thôi nha
-    - gặp sau
-    - đi đây
 
-- intent: affirm
+- intent: ask_ability
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-    - đúng rồi em
-    - chuẩn rồi
-    - đúng
-    - vâng
-    - chính xác
-    - được đấy
-    - đương nhiên
-    - đúng vậy
+    - em có thể làm những gì nhỉ
+    - em có chức năng gì?
+    - em giúp gì được anh không?
+    - em có thể giúp gì cho anh?
+    - em biết làm gì?
+    - em hỗ trợ anh như thế nào?
+    - cho anh xem các chức năng của em
+
+- intent: thankyou
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
 
 - intent: deny
   examples: |
@@ -90,10 +78,9 @@ nlu:
     - ngu thật
     - dở ghê
     - có thế mà cũng không biết
-    - kém cỏi
-    - sai rồi, chán ghê
+    - kém cói
 
-- intent: mood_great
+- intent: praise
   examples: |
     - perfect
     - great
@@ -109,18 +96,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-    - cảm ơn em nhá
-    - thanks em nha
-    - cảm ơn nha
-    - good job
-    - cảm ơn bạn nha
-    - cảm ơn nhiều
-    - thank you
-    - cảm ơn bot nha
-    - thanks bot
-    - cảm ơn
-    - thank you so much
-    - great! Thanks
     - bot giỏi quá
     - great
     - awsome
@@ -128,6 +103,8 @@ nlu:
     - ui giỏi thế
     - bot thông minh
     - đẹp trai đấy
+    - Em đẹp lắm
+
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -145,16 +122,17 @@ nlu:
     - so saad
     - so sad
 
-- intent: ask_ability
-    - em có thể làm những gì nhỉ
-    - em có chức năng gì?
-    - em giúp gì được anh không?
-    - bạn có thể  làm gì?
-    - em có thể giúp gì cho anh?
-    - bạn biết hát không ?
-    - em biết làm gì?
-    - em hỗ trợ anh như thế nào?
-    - cho anh xem các chức năng của em
+- intent: ask_for_lunch
+  examples: |
+    - trưa nay anh nên ăn gì nhỉ
+    - trưa nay ăn gì bây giờ nhỉ
+    - chọn giúp t bữa trưa phát
+    - ăn trưa nào
+    - tiểu nhị, chọn món
+    - bữa trưa
+    - ăn gì bây giờ
+    - chọn giúp anh một quán ăn
+    - ăn gì nhỉ
 
 - intent: bot_challenge
   examples: |
@@ -162,3 +140,122 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: ask_food
+  examples: |
+    - ở đây có món gì ngon?
+    - món gì ngon nhỉ
+    - các món đặc sản
+    - các món nên thử khi đến đây
+    - ăn gì đây ta?
+    - ăn gì em nhỉ?
+    - món ngon gia lai
+    - món ăn địa phương ở đây là gì?
+    - các món gỏi
+
+- intent: ask_hotel
+  examples: |
+    - nghỉ ở đâu em ơi?
+    - nghỉ chỗ nào nhỉ?
+    - khách sạn nào được nhỉ?
+    - hotel gia lai
+    - hotel
+    - khách sạn
+    - khách sạn gần
+    - khách sạn đẹp
+    - khách sạn chất lượng
+    - khách sạn ở đâu tốt
+    - đến đây thì ở chỗ nào
+    - gợi ý một vài khách sạn
+    - điểm dừng chân qua đêm
+    - qua đêm chỗ nào
+    - đặt phòng
+    - đặt khách sạn
+
+- intent: ask_cost_food
+  examples: |
+    - ăn ở đâu rẻ nhỉ?
+    - ăn ở đâu thì chất lượng
+    - ăn chỗ nào rẻ nhất
+    - ăn chỗ nào đắt nhất
+    - ăn ở chỗ nào giá vừa vừa
+
+- intent: ask_cost_hotel
+  examples: |
+    - khách sạn rẻ
+    - khách sạn sang trọng
+    - hotel rẻ 
+    - hotel sang trọng
+    - hotel đắt
+    - một đêm bao nhiêu
+    - bao nhiêu một ngày đêm
+
+- intent: ask_trips
+  examples: |
+    - đi chỗ nào được em
+    - đi chỗ nào đẹp
+    - đến đâu đẹp nhỉ
+    - gia lai có những chỗ nào
+    - du lịch gia lai đi chỗ nào được
+    - địa điểm du lịch
+    - địa điểm vui chơi
+    - địa điểm nào đẹp
+    - địa điểm nào tốt
+    - địa điểm nổi tiếng
+    - chỗ nào nổi tiếng ở gia lai
+    - những địa điểm đẹp
+    - các địa điểm cần đến ở gia lai
+    - xếp hạng địa điểm du lịch ở gia lai
+
+- intent: ask_coffee
+  examples: |
+    - quán cà phê ở đâu ngon
+    - đi uống cà phê quán nào?
+    - chỗ bán cà phê nổi tiếng gia lai
+    - quán cà phê ngon
+    - cà phê ngon
+    - cà phê view đẹp
+    - cà phê đẹp
+    - uống cà phê ở đâu ngon
+    - tiệm cà phê ngon
+    - tiệm cà phê đẹp
+    - có quán cà phê nào không?
+
+- intent: ask_festival
+  examples: |
+    - lễ hội ở gia lai
+    - lễ hội
+    - gia lai có lễ hội gì
+    - festival gia lai
+    - ở gia lai thì đi lễ hội gì em ơi
+    - các lễ lớn ở gia lai
+    - các lễ hội ở gia lai
+
+- intent: festival_congchieng
+  examples: |
+    - lễ hội cồng chiêng được tổ chức vào khi nào
+    - khi nào tổ chức lễ hội cồng chiêng
+    - lễ hội cồng chiêng là gì
+    - cồng chiêng tây nguyên gia lai
+    - cồng chiêng
+    - cong chieng
+    - le hoi cong chieng
+
+- intent: daquy_festival
+  examples: |
+    - dã quỳ
+    - lễ hội hoa dã quỳ
+    - lễ hội dã quỳ khi nào
+    - lễ hội hoa dã quỳ tổ chức ở đâu
+    - đến lễ hội dã quỳ
+
+- intent: ask_hotline
+  examples: |
+    - số điện thoại đường dây nóng
+    - số điện thoại sở văn hóa
+    - số điện thoại hotline sở du lịch
+    - số điện thoại nóng
+    - sđt
+    - hotline du lịch
+    - tổng đài du lịch
+    - tổng đài

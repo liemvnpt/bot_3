@@ -6,8 +6,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
 - story: sad path 1
   steps:
@@ -16,8 +14,6 @@ stories:
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
 
 - story: sad path 2
   steps:
@@ -28,3 +24,89 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+  
+## goodbye
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+## thankyou
+- story: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_noworries
+
+## ask ability
+- story: ask_ability
+  steps:
+  - intent: ask_ability
+  - action: utter_show_ability
+
+## praise
+- story: praise
+  steps:
+  - intent: praise
+  - action: utter_happy
+
+## deny
+- story: deny
+  steps:
+  - intent: deny 
+  - action: utter_sorry
+
+## ask_for_lunch
+- story: ask_for_lunch
+  steps:
+  - intent: ask_for_lunch
+  - action: action_recommend
+
+- story: hotline
+  steps:
+  - intent: ask_hotline
+  - action: act_hotline
+
+- story: hotel
+  steps:
+  - intent: ask_hotel
+  - action: act_hotel
+
+- story: coffee
+  steps:
+  - intent: ask_coffee
+  - action: act_coffee
+
+- story: ask_food
+  steps:
+  - intent: ask_food
+  - action: act_food
+
+- story: ask_cost_food
+  steps:
+  - intent: ask_cost_food
+  - action: act_cost_food
+
+- story: ask_cost_hotel
+  steps:
+  - intent: ask_cost_hotel
+  - action: act_cost_hotel
+
+- story: ask_trips
+  steps:
+  - intent: ask_trips
+  - action: act_trips
+
+- story: ask_festival
+  steps:
+  - intent: ask_festival
+  - action: act_festival
+
+- story: festival_congchieng
+  steps:
+  - intent: festival_congchieng
+  - action: act_congchieng
+
+- story: daquy_festival
+  steps:
+  - intent: daquy_festival
+  - action: act_daquy

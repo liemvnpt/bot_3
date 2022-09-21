@@ -3,31 +3,81 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
   - deny
-  - mood_great
   - mood_unhappy
   - bot_challenge
+  - thankyou
+  - praise
+  - ask_for_lunch
+  - ask_ability
+  - ask_food
+  - ask_cost_food
+  - ask_coffee
+  - ask_hotel
+  - ask_cost_hotel
+  - ask_hotline
+  - festival_congchieng
+  - daquy_festival
+  - ask_trips
+  - ask_festival
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "xin chào, Anh/chị cần hỗ trợ gì ạ??"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "hi vọng điều này có thể giúp ích cho Anh/Chị:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Anh/Chị cần giúp gì ạ?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Hì hì, anh chị khen quá lời rồi ạ!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text:  "Hẹn gặp lại anh chị ạ ^^"
+    image: https://i.imgur.com/nGF1K8f.jpg
+  
+  utter_sorry:
+  - text: "Em xin lỗi vì em chưa đủ thông minh ạ =((("
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Vâng, em là bot ạ"
+
+  utter_noworries:
+  - text: "Em luôn sẵn lòng giúp đỡ anh(chị) bất cứ lúc nào ạ ^^"
+
+  utter_show_ability:
+  - text: "dạ em có thể hỗ trợ anh chị khi đến tham quan du lịch ở Gia Lai ạ."
+
+  utter_fallback:
+  - text: "Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ"
+
+  utter_default:
+  - text: "Xin lỗi, em không thể thực hiện yêu cầu của anh chị được ạ. anh chị có thể hỏi lại ạ?"
+
+actions:
+- utter_greet
+- utter_happy
+- utter_goodbye
+- utter_sorry
+- utter_noworries
+- action_recommend
+- utter_show_ability
+- utter_fallback
+- utter_did_that_help
+- utter_cheer_up
+- act_food
+- act_cost_food
+- act_hotel
+- act_cost_hotel
+- act_coffee
+- act_hotline
+- act_festival
+- act_congchieng
+- act_daquy
+- act_trips
 
 session_config:
   session_expiration_time: 60
