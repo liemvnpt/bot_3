@@ -7,6 +7,6 @@ USER root
 RUN chmod -R 777 /app
 USER 1001
 
-RUN rasa run actions
+CMD $(echo “rasa run -p $PORT -m models --credentials credentials.yml --enable-api --log-file out.log --endpoints endpoints.yml” | sed ‘s/=//’)
 
 ENTRYPOINT ["/app/server.sh"]
