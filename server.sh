@@ -5,4 +5,4 @@ then
   PORT=5005
 fi
 
-rasa run --endpoints endpoints.yml --credentials credentials.yml --port $PORT
+rasa run --endpoints endpoints.yml --credentials credentials.yml

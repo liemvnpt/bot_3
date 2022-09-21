@@ -7,7 +7,6 @@ USER root
 RUN chmod -R 777 /app
 USER 1001
 
-RUN rasa train nlu
 RUN rasa run actions
 
 ENTRYPOINT ["/app/server.sh"]
